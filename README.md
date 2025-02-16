@@ -1,6 +1,6 @@
 # 📊 Algorithmic Sentence Analyzer
 
-A futuristic **sentence analysis tool** with a **math & algorithm-themed UI**.  
+A  **sentence analysis tool** with a **math & algorithm-themed UI**.  
 This web app calculates:
 - 📏 **Sentence Length** (Total characters)
 - 📖 **Word Count** (Assuming single-space separation)
@@ -11,7 +11,7 @@ This web app calculates:
 ---
 
 ## 🎨 **Live Demo**
-🔗 [View the Project](https://YOUR_GITHUB_USERNAME.github.io/math-algorithm-analyzer/)  
+🔗 [View the Project](https://daslime.github.io/math-algorithm-analyzer/)  
 
 ---
 
@@ -29,6 +29,9 @@ This web app calculates:
 ```sh
 git clone https://github.com/YOUR_GITHUB_USERNAME/math-algorithm-analyzer.git
 cd math-algorithm-analyzer
+```
+
+---
 2️⃣ Open in Browser
 Simply open index.html in your browser! 🚀
 
@@ -43,6 +46,8 @@ App calculates and displays:
 Sentence Length 📏
 Number of Words 📖
 Number of Vowels 🅰️
+```
+---
 📂 Project Structure
 sh
 Copy
@@ -50,7 +55,10 @@ Edit
 math-algorithm-analyzer/
 │── index.html  # Main UI + JavaScript logic
 │── README.md   # Documentation (You’re reading it now!)
-└── assets/     # (Optional: Images, additional styles, etc.)
+
+
+```
+---
 🔧 How to Contribute
 Want to improve this project? Feel free to:
 ✅ Fork the repository
@@ -59,27 +67,13 @@ Want to improve this project? Feel free to:
 ✅ Push to GitHub (git push origin feature-new-feature)
 ✅ Open a Pull Request 🚀
 
-📜 License
-This project is MIT Licensed – feel free to use and modify!
-
-📩 Connect with Me
-🔗 GitHub: YOUR_GITHUB_USERNAME
-📧 Email: your@email.com
-
-💡 Enjoy coding with math & algorithms! 🎯🚀
-
-yaml
-Copy
-Edit
-
 ---
 
-### **📌 What You Need to Do:**
-1. **Replace `YOUR_GITHUB_USERNAME` with your actual GitHub username**  
-2. **Replace `your@email.com` with your actual email (if you want)**  
-3. **Commit & push it to GitHub**  
+📩 Connect with Me
+🔗 GitHub: [(https://github.com/daslime)]
+📧 Email: brianmutugidev@gmail.com
 
-Now your project **looks professional, structured, and ready for submission!** 🚀😎
+💡 Enjoy coding with math & algorithms! 🎯🚀
 
 
 
