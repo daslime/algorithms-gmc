@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentence Analyzer project GMC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .result {
+            margin-top: 15px;
+            text-align: left;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Sentence Analyzer</h2>
+        <input type="text" id="sentenceInput" placeholder="Enter a sentence ending with a period...">
+        <button onclick="analyzeSentence()">Analyze</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function analyzeSentence() {
+            let sentence = document.getElementById("sentenceInput").value.trim();
+
+            if (!sentence.endsWith(".")) {
+                alert("The sentence must end with a period (.)");
+                return;
+            }
+
+            let length = sentence.length;
+            let wordCount = 0;
+            let vowelCount = 0;
+            let vowels = "aeiouAEIOU";
+            let inWord = false;
+
+            for (let i = 0; i < sentence.length; i++) {
+                let char = sentence[i];
+
+                if (vowels.includes(char)) {
+                    vowelCount++;
+                }
+
+                if (char === ' ') {
+                    inWord = false;
+                } else if (!inWord) {
+                    wordCount++;
+                    inWord = true;
+                }
+            }
+
+            document.getElementById("result").innerHTML = `
+                <p><strong>Length of sentence:</strong> ${length} characters</p>
+                <p><strong>Number of words:</strong> ${wordCount}</p>
+                <p><strong>Number of vowels:</strong> ${vowelCount}</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>
