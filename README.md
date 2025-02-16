@@ -27,8 +27,8 @@ This web app calculates:
 ## 🚀 **Installation & Usage**
 ### 1️⃣ Clone the Repository  
 ```sh
-git clone https://github.com/YOUR_GITHUB_USERNAME/math-algorithm-analyzer.git
-cd math-algorithm-analyzer
+git clone https://github.com/daslime/algorithms-gmc.git
+cd algorithms-gmc
 ```
 
 ---
