@@ -3,61 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sentence Analyzer project GMC</title>
+    <title>Algorithmic Sentence Analyzer</title>
     <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f4f4f4;
-            margin: 0;
+            background: #000000; 
+            color: #00ff00; 
         }
+
         .container {
-            background: white;
-            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00ff00;
             border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            width: 350px;
+            padding: 25px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
             text-align: center;
+            width: 400px;
         }
+
         h2 {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 22px;
+            text-shadow: 0 0 5px #00ff00;
         }
+
         input {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin: 10px 0;
-            border: 1px solid #ccc;
+            border: 2px solid #00ff00;
             border-radius: 5px;
+            font-size: 16px;
+            background: #0d1117;
+            color: #00ff00;
+            outline: none;
         }
+
+        input:focus {
+            box-shadow: 0px 0px 8px rgba(0, 255, 0, 0.8);
+        }
+
         button {
             width: 100%;
-            padding: 10px;
-            border: none;
-            background: #28a745;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
+            padding: 12px;
+            border: 2px solid #00ff00;
             border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            background: black;
+            color: #00ff00;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            text-shadow: 0 0 5px #00ff00;
         }
+
         button:hover {
-            background: #218838;
+            background: #00ff00;
+            color: black;
+            box-shadow: 0px 0px 15px rgba(0, 255, 0, 1);
         }
+
         .result {
-            margin-top: 15px;
-            text-align: left;
+            margin-top: 20px;
             font-size: 16px;
-            color: #333;
+            background: rgba(0, 255, 0, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            border: 2px solid #00ff00;
+            text-align: left;
+        }
+
+        .result p {
+            margin: 5px 0;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h2>Sentence Analyzer</h2>
-        <input type="text" id="sentenceInput" placeholder="Enter a sentence ending with a period...">
+        <h2>📊 Algorithmic Sentence Analyzer</h2>
+        <input type="text" id="sentenceInput" placeholder="Type a sentence ending with '.'">
         <button onclick="analyzeSentence()">Analyze</button>
         <div class="result" id="result"></div>
     </div>
@@ -67,7 +104,7 @@
             let sentence = document.getElementById("sentenceInput").value.trim();
 
             if (!sentence.endsWith(".")) {
-                alert("The sentence must end with a period (.)");
+                alert("⚠️ Error: The sentence must end with a period (.)");
                 return;
             }
 
@@ -93,9 +130,9 @@
             }
 
             document.getElementById("result").innerHTML = `
-                <p><strong>Length of sentence:</strong> ${length} characters</p>
-                <p><strong>Number of words:</strong> ${wordCount}</p>
-                <p><strong>Number of vowels:</strong> ${vowelCount}</p>
+                <p><strong>🔢 Sentence Length:</strong> ${length} characters</p>
+                <p><strong>📖 Words Count:</strong> ${wordCount}</p>
+                <p><strong>🅰️ Vowels Count:</strong> ${vowelCount}</p>
             `;
         }
     </script>
